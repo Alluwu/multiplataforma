@@ -1,3 +1,60 @@
+#  Maven / Java
+target/
 **/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+.mvn/timing.properties
+# Logs
+*.log
+*.out
+*.err
+log/
+logs/
+# IDEs y herramientas
 .idea/
 .vscode/
+*.iml
+*.class
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+
+#  Spring Boot / Config
+
+# Archivos de configuración locales
+application-*.yml
+application-*.properties
+.env
+.env.*
+
+# Archivos generados por OpenAPI o documentación
+**/target/generated-openapi/
+**/openapi/
+**/.openapi/
+**/swagger-ui.html
+
+
+# Node / Next.js 
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+out/
+dist/
+.cache/
+coverage/
+
+
+# OS temporales
+
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+*.rej
+*~
