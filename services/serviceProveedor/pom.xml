@@ -2,6 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- Hereda versions y manejo de dependencias del POM padre -->
   <parent>
     <groupId>com.mpedidos</groupId>
     <artifactId>multipedidos</artifactId>
@@ -11,17 +12,33 @@
   <artifactId>serviceProveedor</artifactId>
 
   <dependencies>
+    <!-- API REST -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    
+
+    <!-- JPA (incluye jakarta.persistence.*, hibernate, transacciones) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <!-- Driver PostgreSQL (lo dejamos ya listo) -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Lombok (getters/setters, builder, etc.) -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
 
+    <!-- Librería común -->
     <dependency>
       <groupId>com.mpedidos</groupId>
       <artifactId>common-lib</artifactId>
@@ -31,6 +48,18 @@
 
   <build>
     <plugins>
+      <!-- Compilación con Java 17 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>17</release>
+          <fork>true</fork>
+        </configuration>
+      </plugin>
+
+      <!-- Empaquetado/ejecución Spring Boot -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
