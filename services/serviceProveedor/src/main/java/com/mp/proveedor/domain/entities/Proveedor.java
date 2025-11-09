@@ -20,6 +20,7 @@ public class Proveedor extends BaseEntity {
     private String telefono;
     @Column(name = "correoElectronico", length = 150)
     private String correoElectronico;
+    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrdenCompra> ordenes = new ArrayList();
 
 }
