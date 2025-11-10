@@ -7,7 +7,6 @@ import com.mp.proveedor.dto.response.ProveedorResponse;
 import com.mp.proveedor.exception.BadRequestException;
 import com.mp.proveedor.exception.NotFoundException;
 import com.mp.proveedor.repository.ProveedorRepository;
-import com.mp.proveedor.service.IProveedorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
