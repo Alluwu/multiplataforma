@@ -1,5 +1,6 @@
 package com.mp.proveedor.domain.entities;
 
+
 import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
 import java.time.LocalDateTime;
